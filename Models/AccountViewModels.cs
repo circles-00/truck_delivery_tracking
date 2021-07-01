@@ -65,6 +65,21 @@ namespace Truck_Delivery_Tracking.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "First Name")]
+        public string firstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string lastName { get; set; }
+
+        [Required]
+        [Display(Name = "Age")]
+        public int age { get; set; }
+        [Required]
+        [Display(Name = "Avatar Picture URL")]
+        public string pictureURL { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

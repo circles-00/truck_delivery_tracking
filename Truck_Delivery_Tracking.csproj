@@ -174,19 +174,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107010223468_InitialMigration.cs" />
-    <Compile Include="Migrations\202107010223468_InitialMigration.Designer.cs">
-      <DependentUpon>202107010223468_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDbContextMigrations\202107010221586_InitialCreate.cs" />
+    <Compile Include="Migrations\ApplicationDbContextMigrations\202107010221586_InitialCreate.Designer.cs">
+      <DependentUpon>202107010221586_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107010225267_TaskModelChange.cs" />
-    <Compile Include="Migrations\202107010225267_TaskModelChange.Designer.cs">
-      <DependentUpon>202107010225267_TaskModelChange.cs</DependentUpon>
+    <Compile Include="Migrations\ApplicationDbContextMigrations\202107010954073_Initial Migration.cs" />
+    <Compile Include="Migrations\ApplicationDbContextMigrations\202107010954073_Initial Migration.Designer.cs">
+      <DependentUpon>202107010954073_Initial Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\ApplicationDbContextMigrations\Configuration.cs" />
+    <Compile Include="Migrations\TasksDbContextMigrations\202107010946467_Initial Migration.cs" />
+    <Compile Include="Migrations\TasksDbContextMigrations\202107010946467_Initial Migration.Designer.cs">
+      <DependentUpon>202107010946467_Initial Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\TasksDbContextMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\TaskDbContext.cs" />
+    <Compile Include="Models\TasksDbContext.cs" />
     <Compile Include="Models\Tasks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -271,11 +276,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202107010223468_InitialMigration.resx">
-      <DependentUpon>202107010223468_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDbContextMigrations\202107010221586_InitialCreate.resx">
+      <DependentUpon>202107010221586_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107010225267_TaskModelChange.resx">
-      <DependentUpon>202107010225267_TaskModelChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\ApplicationDbContextMigrations\202107010954073_Initial Migration.resx">
+      <DependentUpon>202107010954073_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\TasksDbContextMigrations\202107010946467_Initial Migration.resx">
+      <DependentUpon>202107010946467_Initial Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
