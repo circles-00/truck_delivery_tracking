@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -134,6 +135,28 @@ namespace Truck_Delivery_Tracking.Controllers
             }
         }
 
+        [Authorize(Roles ="Employer")]
+        public ActionResult AddUserToRole()
+        {
+            AddToRoleModel model = new AddToRoleModel();
+            model.Roles = new List<string>() { "Employer", "Driver" };
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize(Roles ="Employer")]
+        public ActionResult AddUserToRole(AddToRoleModel model)
+        {
+            var email = model.Email;
+            var user = UserManager.FindByEmail(email);
+            if (user == null)
+            {
+                throw new HttpException(404, "The specified user cannot be found");
+            }
+            UserManager.AddToRole(user.Id, model.SelectedRole);
+            return RedirectToAction("AddUserToRole", "Account");
+        }
+
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -155,6 +178,7 @@ namespace Truck_Delivery_Tracking.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await UserManager.AddToRoleAsync(user.Id, "Driver");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
