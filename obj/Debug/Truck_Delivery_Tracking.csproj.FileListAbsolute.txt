@@ -106,3 +106,6 @@ D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Trac
 D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.csproj.CopyComplete
 D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.dll
 D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.pdb
+D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.Migrations.InitialMigration.resources
+D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.csproj.GenerateResource.cache
+D:\myrootfiles\FINKI\4. Semestar\Internet Tehnologii\Project\Truck_Delivery_Tracking\obj\Debug\Truck_Delivery_Tracking.Migrations.TaskModelChange.resources
