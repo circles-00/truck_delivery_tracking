@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Truck_Delivery_Tracking.Models.Tasks>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo_content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo_weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isFinished)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.driver)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.distance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isFinished)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.driver)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

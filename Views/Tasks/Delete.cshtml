@@ -1,0 +1,104 @@
+﻿@model Truck_Delivery_Tracking.Models.Tasks
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tasks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.distance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.distance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.departure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargo_weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargo_weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isFinished)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isFinished)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.driver)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.driver)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
